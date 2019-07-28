@@ -8,7 +8,7 @@ class PortfolioContainer extends Component {
       <div>
         <h2>My Portfolio</h2>
           {
-            //render your portfolio stocks here
+            this.props.boughtStocks.map(boughtStock => <Stock {...boughtStock} key={boughtStock.id} clickHandler={() => {this.props.clickHandler(boughtStock)}}/>)
           }
       </div>
     );
